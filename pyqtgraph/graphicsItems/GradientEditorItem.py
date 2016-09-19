@@ -397,8 +397,8 @@ class GradientEditorItem(TickSliderItem):
         TickSliderItem.__init__(self, *args, **kargs)
         
         self.colorDialog = QtGui.QColorDialog()
-        self.colorDialog.setOption(QtGui.QColorDialog.ShowAlphaChannel, True)
-        self.colorDialog.setOption(QtGui.QColorDialog.DontUseNativeDialog, True)
+        self.colorDialog.setOption(QtGui.QColorDialog.ShowAlphaChannel, False)
+        self.colorDialog.setOption(QtGui.QColorDialog.DontUseNativeDialog, False)
         
         self.colorDialog.currentColorChanged.connect(self.currentColorChanged)
         self.colorDialog.rejected.connect(self.currentColorRejected)
